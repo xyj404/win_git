@@ -1,0 +1,103 @@
+*{
+    padding:0px;
+    margin:0px;
+    font:20px "黑体";
+}
+body {
+    width:100vw;
+    height: 100vh;
+    background:linear-gradient(to bottom right,rgb(158,247,255),rgb(185,165,255));
+}
+#container {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    margin:auto;
+    background-color: #fff;
+    box-shadow: 0px 5px 10px #999999;
+}
+#figure1 {
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    border-radius: 0px 0px 120px 0px;
+    background:radial-gradient(circle,rgb(106,226,240),rgb(185,250,251));
+    vertical-align: top;
+}
+#figure2 {
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    border-radius:0px 0px 50px 50px;
+    background:linear-gradient(to right, rgb(202, 190, 255), rgb(176, 149, 255));
+    margin-left: -30px;
+    vertical-align: top;
+}
+#figure3 {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 0 0 0 100px;
+    background: linear-gradient(to bottom, rgb(245,189,215),rgb(243,195,221));
+    float: right;
+}
+h1 {
+    text-align: center;
+    margin:80px 0px 40px;
+    font-size: 1.5rem;
+    color: #99677c;
+}
+#wrap {
+    position: relative;
+}
+.login {
+    display: inline-block;
+    width: 48%;
+    text-align:center;
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+.line {
+    height: 1px;
+    width: 48%;
+    background-color: #999999;
+    position: absolute;
+    top: 30px;
+    transition: all .3s;
+}
+.toLeft {
+    left:0px;
+}
+.toRight {
+    left:48%;
+}
+form {
+    text-align: center;
+}
+input {
+    border:none;
+    border-bottom: 1px solid #666666;
+    outline: none;
+}
+a {
+    display: inline-block;
+    width: 100px;
+    text-decoration: none;
+    color:#000;
+    margin:40px;
+    border:1px solid #000;
+    border-radius: 10px;
+    cursor:pointer;
+}
+
+/*媒体查询*/
+@media screen and (min-width: 960px){
+    #container{
+        width: 400px;
+        height: 550px;
+    }
+}

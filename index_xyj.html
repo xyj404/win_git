@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TodoList</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="vue.js"></script>
+    <link rel="stylesheet" href="index_xyj.css">
+    <script src="index_xyj.js" defer></script>
+</head>
+<body >
+<div id = "main">
+<div id="container" v-if="!currentUser">
+    <div>
+        <div id="figure1"></div>
+        <div id="figure2"></div>
+        <div id="figure3"></div>
+        <h1>{{status}}TodoList</h1>
+        <div id = "wrap">
+            <div class="login" v-on:click="changeStatus(0)" @click="toLeft">注册</div>
+
+            <div class="login" v-on:click="changeStatus(1)" @click="toRight">登录</div><br>
+
+            <div class="line" v-bind:class="classObject"></div>
+
+        </div>
+        <form action="">
+            <input type="text" placeholder="用户名" v-model="username"><br>
+            <input type="text" placeholder="密码" v-model="password"><br>
+            <a v-on:click="submit">{{status}}</a>
+        </form>
+
+    </div>
+</div>
+<div id="TodoPage" v-if="currentUser">
+    <input type="text" v-model="input">
+    <button @click="addTodo">确定</button>
+    <ul>
+        <li v-for="todo in todoList">{{todo}}</li>
+    </ul>
+</div>
+</div>
+</body>
+</html>
